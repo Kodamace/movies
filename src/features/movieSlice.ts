@@ -29,6 +29,7 @@ export const movieSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchMovies.pending, (state, action) => {
       state.loading = true;
+      state.isError = false;
     });
     builder.addCase(fetchMovies.fulfilled, (state, action) => {
       state.loading = false;
@@ -40,6 +41,7 @@ export const movieSlice = createSlice({
     });
     builder.addCase(fetchMovieInfo.pending, (state, action) => {
       state.movieInfo.loading = true;
+      state.movieInfo.isError = false;
     });
     builder.addCase(fetchMovieInfo.fulfilled, (state, action) => {
       state.movieInfo.loading = false;

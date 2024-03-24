@@ -47,7 +47,11 @@ const MovieInfo = () => {
           <StyledMovieExtraInfo>
             <p>
               <strong>Description: </strong>
-              {data?.short?.description || 'Not found'}
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: data?.short?.description || 'Not found',
+                }}
+              />
             </p>
             <div>
               <strong>Actors: </strong>

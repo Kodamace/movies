@@ -13,8 +13,8 @@ export const StyledMovieOuter = styled.div`
     cursor: pointer;
     font-size: 18px;
     img {
-      height: 210px;
-      width: 210px;
+      height: 310px;
+      width: 310px;
     }
   }
   display: flex;
@@ -22,8 +22,7 @@ export const StyledMovieOuter = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-bottom: 8px;
-  height: 250px;
-  width: 500px;
+  height: 350px;
   border-radius: 20px;
 `;
 
@@ -42,8 +41,8 @@ export const StyledMovieInfo = styled.div`
 `;
 
 export const StyledMovieImg = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 20px;
 `;
 
@@ -67,5 +66,5 @@ export const StyledReview = styled.p`
 `;
 
 export const StyledMovieExtraInfo = styled.div`
-  padding: 20px 80px;
+  padding: 20px 580px;
 `;
