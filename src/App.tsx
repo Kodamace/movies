@@ -16,7 +16,7 @@ function App() {
 
     mount.current = true;
     return () => {};
-  }, []);
+  });
   return (
     <BrowserRouter>
       <Routes>

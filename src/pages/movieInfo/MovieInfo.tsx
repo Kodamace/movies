@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchMovieInfo } from '../../thunks';
 import { useAppDispatch, useAppSelector } from '../../hooks';
@@ -10,13 +10,15 @@ const MovieInfo = () => {
   const { loading, data, isError } = useAppSelector(
     (state) => state.movies.movieInfo
   );
+  let mountedRef = useRef(false);
   const { movieId } = useParams();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
-    if (movieId) {
+    if (movieId && !mountedRef.current) {
       dispatch(fetchMovieInfo(movieId));
+      mountedRef.current = true;
     }
 
     return () => {};
